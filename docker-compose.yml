@@ -1,0 +1,16 @@
+version: "3"
+services:
+  data-container:
+    container_name: my-datacontainer
+    image: mhart/alpine-node:latest
+    volumes:
+      - /var/data-volume
+  node-app:
+    container_name: my-dataclient
+    build: .
+    image: nodeapp/filedownload:1.0
+    environment:
+      NODE_ENV: development
+      DBHOST: mongo
+    volumes:
+      - data-container
