@@ -1,0 +1,37 @@
+{
+  "name": "node-dockervolumes",
+  "version": "1.0.0",
+  "description": "node.js application with docker container sharing volumes from other docker data container.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fahidnasir/node-dockervolumes.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "http",
+    "docker",
+    "container",
+    "data-container",
+    "sharing",
+    "volumes"
+  ],
+  "author": "Fahid Nasir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fahidnasir/node-dockervolumes/issues"
+  },
+  "homepage": "https://github.com/fahidnasir/node-dockervolumes#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
