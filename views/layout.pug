@@ -2,7 +2,11 @@ doctype html
 html
   head
     title= title
+    block head-links
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    .container
+      .row
+        block content
     include footer
+    block body-links
