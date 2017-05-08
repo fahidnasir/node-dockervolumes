@@ -1,0 +1,28 @@
+extends layout
+
+block head-links
+  link(rel="stylesheet" href="bootstrap/css/bootstrap.css")
+
+block content
+  .col-md-offset-2.col-md-8
+    .panel.panel-primary
+      .panel-heading
+        .panel-header
+          h4 File Uploading on Server
+      .panel-body
+        span.glyphicon.glyphicon-cloud-upload.glyphicon-xl
+        .progress
+          .progress-bar(role="progressbar")
+        .form-group
+          label.control-label(label-for="destination") Destination Folder
+          input.form-control#destination(name="destination", type="text", value="D:\\demo-folder\\downloads")
+        .form-group
+          button.btn.btn-default#btnFileSelect Select File
+          input.form-control#upload-input(name="upload-input", type="file")
+        button.btn.btn-primary.btn-block#btnSaveFile(disabled="disabled") Save File
+
+block body-links
+  script(src="jquery/jquery.js", type="text/javascript")
+  script(src="bootstrap/js/bootstrap.js", type="text/javascript")
+  script(src="javascripts/site.js", type="text/javascript")
+    
