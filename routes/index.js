@@ -6,39 +6,12 @@ var path = require('path');
 var formidable = require('formidable');
 var mkdirp = require('mkdirp');
 
-const DOWNLOAD_DIR = 'D:\\demo-folder\\downloads\\';
+const DOWNLOAD_DIR = 'D:\\demo-folder\\';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {  
   res.render('index', { title: 'Node Docker Volumes' });
 });
-
-router.get('/download-picasa', function(req, res, next){
-  try {
-    var download = require('../app/downloader');
-
-    // App variables
-    var file_url = 'https://dl.google.com/picasa/picasa39-setup.exe';
-    if(!fs.existsSync(DOWNLOAD_DIR)){
-      //when parent folders must be created otherwise it will give error or User `mkdirp`.
-      mkdirp(path.resolve(DOWNLOAD_DIR), function (err) {
-        if (err) console.error(err)
-        else console.log('dir created')
-      });
-    }
-
-  //   download(file_url, DOWNLOAD_DIR, function(err, id){
-  //     if(err)
-  //       console.log('pepsi error ' + err);
-
-  //     console.log('File Downloaded: %s', id);
-  //   });
-  } catch (error) {
-      console.log('error ' + error);
-  }
-  res.send('file downloaded.');
-});
-
 
 router.post('/upload', function(req, res, next){
   try{
