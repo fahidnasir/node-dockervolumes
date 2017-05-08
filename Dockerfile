@@ -11,6 +11,6 @@ WORKDIR /opt/app
 ADD . /opt/app
 
 # 80 = HTTP, 443 = HTTPS, 9000 = MEAN.JS server
-# EXPOSE 9000
+EXPOSE 3000
 
 CMD npm start
