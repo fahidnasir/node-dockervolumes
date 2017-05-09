@@ -2,9 +2,9 @@ version: "3"
 
 services:
   node-app:
-    container_name: my-dataclient
+    container_name: my-volumeclient
     build: .
-    image: nodeapp/filedownload:1.0
+    image: fahidnasir/node-upload-volume:1.0
     environment:
       NODE_ENV: development
     ports:

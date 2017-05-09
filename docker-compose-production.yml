@@ -1,14 +1,16 @@
 version: "3"
+
 services:
-  data-container:
-    container_name: my-datacontainer-prod
-    image: mhart/alpine-node:latest
-    volumes:
-      - /var/data-volume
   node-app:
-    container_name: my-dataclient-prod
+    container_name: my-volumeclient-prod
     build: .
-    image: fahidnasir/filedownload:1.0
+    image: fahidnasir/node-upload-volume:1.0
     environment:
       NODE_ENV: production
-      DBHOST: mongo
+    ports:
+      - "3000:3000"
+    volumes:
+      - data-volume:/var/lib/files/
+
+volumes:
+  data-volume:
