@@ -13,4 +13,6 @@ ADD . /opt/app
 # 80 = HTTP, 443 = HTTPS, 9000 = MEAN.JS server
 EXPOSE 3000
 
+VOLUME "/var/lib/files"
+
 CMD npm start
