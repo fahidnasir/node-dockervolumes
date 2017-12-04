@@ -18,7 +18,7 @@ Package | Version | Description
 * Docker (Verify installation with command `docker -v`)
 * Docker-Compose (Verify installation with command `docker-compose -v`)
 
-### Steps to run local folder sample
+### Steps to run docker data container sample
 
 1. Open Command Line
 2. Clone or Download Project (`git clone https://github.com/fahidnasir/node-dockervolumes.git`)
